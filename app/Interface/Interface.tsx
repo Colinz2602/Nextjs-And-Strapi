@@ -6,6 +6,7 @@ export interface Review {
     Title: string;
     rating: number;
     body: BlocksContent;
+    categories: Category[];
 }
 
 export interface ApiResponse {

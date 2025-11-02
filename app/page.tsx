@@ -24,6 +24,10 @@ const REVIEWS = gql`
       Title
       rating
       body
+      categories {
+        documentId
+        Name
+      }
     }
   }
 `;

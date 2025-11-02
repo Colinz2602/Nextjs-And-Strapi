@@ -20,6 +20,11 @@ export default function ReviewCut({ review }: ReviewCutProps) {
         <div>
             <div className='rating'>{review.rating}</div>
             <h1 className="font-bold text-black text-4xl">{review.Title}</h1>
+            {review.categories && review.categories.length > 0 && (
+                <p className="text-gray-600 italic my-2">
+                    {review.categories.map(cat => cat.Name).join(', ')}
+                </p>
+            )}
             {review.body && (<BlocksRenderer content={contentToShow} />)}
 
             {<button onClick={toggleExpand} className="text-purple-600 underline hover:text-purple-500 transition-colors">
